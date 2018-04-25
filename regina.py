@@ -1,8 +1,48 @@
+# Author: Baris Parlan - @bparlan
+# Purpose: Wiki Summarizer Voice Assistant
+# Created: 22.04.2018
+# regina.py
+
+import settings # settings.py holds apikey variable.
+import speech_recognition as sr # https://realpython.com/python-speech-recognition/
+import os
+
+script_dir = os.path.dirname(__file__)
+wav_location = script_dir + "/harvard.wav"
+
+r = sr.Recognizer()
+harvard = sr.AudioFile(wav_location)
+with harvard as source:
+    r.adjust_for_ambient_noise(source)
+    audio = r.record(source)
+
+type(audio)
+
+wav_text = str(r.recognize_google(audio))
+print(wav_text)
+
+# https://realpython.com/python-speech-recognition/
+
 setting = { "search_engine" : "duckduckgo" }
-
 question = {"type" : "research_summary", "word_count" : "3", "results" : "", "voice_question" : ""}
-
 answer = {}
+
+"""
+TODO: Git exclude api keys.
+
+* Speech Recognition
+  [Wit.ai](https://github.com/wit-ai/pywit)
+  https://realpython.com/python-speech-recognition/
+* [Wikipedia](https://github.com/goldsmith/Wikipedia) - Get data
+* [NLTK](https://github.com/nltk/nltk) - Summarize Wiki
+* Text-to-speech
+  https://deparkes.co.uk/2017/06/30/python-text-speech/
+  https://pythonprogramminglanguage.com/text-to-speech/
+  Sapi to play
+  Gtts to save
+  [gTTS](https://github.com/pndurette/gTTS)
+
+"""
 
 def record_voice():
     question["voice_question"] = str(input("Whats your question? "))
@@ -32,7 +72,6 @@ def calculate_word_count():
     print("Word count of question: %s" % (question["duration"]))
     question["kelime_sayisi"] = question["duration"]
 
-
 def save_answer():
     question["answer"] = "answer"
     print("Answer saved as txt.")
@@ -55,4 +94,6 @@ def research_summary():
     text_to_speach()
     read()
 
-research_summary()
+# research_summary()
+
+print("bo")
