@@ -1,6 +1,7 @@
 # Regina
 
 Voice Assistant - Wiki Summarizer
+Current version demo run (instagram video): https://instagram.com/p/BjAZ-s9DxH2/
 
 ## Getting Started
 
