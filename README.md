@@ -15,7 +15,7 @@ This is **not** a completed or running project. Just I'm spending time on it wit
 Example command:
 Regina, Summarize and tell about Gustav Jung within 2 minutes.
 
-## Requirements
+### Requirements
 
 [SpeechRecognition](https://pypi.org/project/SpeechRecognition)
 
@@ -25,23 +25,52 @@ Regina, Summarize and tell about Gustav Jung within 2 minutes.
 
 [PyAudio](https://pypi.org/project/PyAudio)
 
-## *Will be* Built With
+### *NLP* Libraries to check
 
-* [Wit.ai](https://github.com/wit-ai/pywit) - Understand question
-* [NLTK](https://github.com/nltk/nltk) - Dialogue
+- Scikit-learn: Machine learning in Python
+- [NLTK](https://github.com/nltk/nltk): The complete toolkit for all NLP techniques.
+- TextBlob: Easy to use NLP tools API, built on top of NLTK and Pattern.
+- Stanford Core NLP: NLP services and packages by Stanford NLP Group.
+- spaCy: Industrial strength NLP with Python and Cython.
+- Gensim: Topic Modelling for Humans
+- Pattern: A web mining module for the with tools for NLP and machine learning.
+- [Wit.ai](https://github.com/wit-ai/pywit)
 
-## 2Do's:
+More info from [elitedatascience.com](https://elitedatascience.com/python-nlp-libraries)
 
-* Record Search History - Json
+## TODO:
+
+### General
+
+* Interaction History - Json
 * Share: share with public / friendlist / direct mail / social media
 * _"Take Note" Command_: record a note and save it.
-* Start with "Regina" command.
+* Start with a name command (Regina for me, set **name** from options).
+* Timer and Alarm
+* 2Do reminder - calendar
 * _MultiProcessing_ while searching.
-* DAPP program?
+* DAPP program? Help needed!
+
+### A/V - Visualizer
+
+Spectrum and Visual with Python. Maybe with blender? Help needed!
+
+Example style that I built:
+
+[Advanced Artificial Cosciousness v_log.1.02: Factory Model Education](https://www.youtube.com/watch?v=HQyjXEnHwow)
+
+### LoL Helper
+
+Function that utilize alarm & timer specifically for League of Legends.
+
+## FIX:
+
+* def listen()
+* def speak()
 
 ## Authors
 
-**Baris Parlan** - *@bparlan*
+**Baris Parlan** - [@bparlan](https://www.twitter.com/bparlan)
 
 ## License
 
