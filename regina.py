@@ -16,15 +16,6 @@ import wave
 import wikipedia
 import pyttsx3
 
-“””
-TODO: https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
-“””
-
-# pip install pypiwin32
-# pip install pyttsx3
-# pip install wikipedia
-# pip install pyaudio
-
 THRESHOLD = 500
 CHUNK_SIZE = 1024
 FORMAT = pyaudio.paInt16
@@ -101,7 +92,6 @@ def record():
     r = array('h')
 
     while 1:
-        # little endian, signed short
         snd_data = array('h', stream.read(CHUNK_SIZE))
         if byteorder == 'big':
             snd_data.byteswap()
@@ -154,9 +144,6 @@ def speech_to_text():
     print("Wav's text: " + wav_text)
     return wav_text
 
-    # question["question"] = question["voice_question"]
-    # print("question.soru saves as text format.")
-
 def search_in_wiki(keyword):
     wikipedia.set_lang("en")
     tts_text = str(wikipedia.summary(keyword, sentences=1))
@@ -176,6 +163,9 @@ def text_to_speech(to_be_read):
 def listen():
     print("please speak a word into the microphone")
     record_to_file(wav_location)
+
+    # TODO: https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
+
     busy == True
     query = speech_to_text()
     text_to_speech("I am searching for " + query)
@@ -185,17 +175,11 @@ def listen():
 if __name__ == '__main__':
     while busy == False:
         listen()
+        # TODO: Listen for "Regina", response "Yes master", and wait for commands.
+        # TODO: List available commands / functions.
 
 
 """
-# https://realpython.com/python-speech-recognition/
-
-setting = { "search_engine" : "duckduckgo" }
-question = {"type" : "research_summary", "word_count" : "3", "results" : "", "voice_question" : ""}
-answer = {}
-
-
-TODO: Git exclude api keys.
 
 * Speech Recognition
   [Wit.ai](https://github.com/wit-ai/pywit)
@@ -209,7 +193,6 @@ TODO: Git exclude api keys.
   Gtts to save
   [gTTS](https://github.com/pndurette/gTTS)
 
-
 RAP PART:
 https://www.rappad.co/songs-about/
 https://www.rhymebuster.com/rapgenerator
@@ -219,18 +202,10 @@ http://deepbeat.org/
 https://genius.com/discussions/155749-Rap-generator
 http://writerbot.com/lyrics
 
-
-Generate lyrics:
-
-Generate beat:
-
-Generate melody from lyrics:
-https://melobytes.com/app/melobytes
-
-Generate AVS milkdrop - python audio visualizer
-
-
-
+- Generate lyrics:
+- Generate beat:
+- Generate melody from lyrics: https://melobytes.com/app/melobytes
+- Generate AVS milkdrop - python audio visualizer
 
 def record_voice():
     # question["voice_question"] = str(input("Whats your question? "))
@@ -244,28 +219,9 @@ def analysis_question():
     for items in question["texts"]:
         print(items)
 
-def search_keyword_on_web():
-    # Get data from wikipedia?
-    print("Searched %s in %s." % (setting["search_engine"], question["keyword"]))
-
-def save_results():
-    results = "Important info: " + str(question["keyword"])
-    print("results: %s" % (results))
-
 def calculate_word_count():
     print("Word count of question: %s" % (question["duration"]))
     question["kelime_sayisi"] = question["duration"]
-
-def save_answer():
-    question["answer"] = "answer"
-    print("Answer saved as txt.")
-
-def text_to_speach():
-    answer["ses_answer"] = question["answer"]
-    print("Answer saved as voice.")
-
-def read():
-    print("answer.ses_answer")
 
 def research_summary():
     input = record_voice()
@@ -277,7 +233,6 @@ def research_summary():
     save_answer()
     text_to_speach()
     read()
-
 
 # research_summary()
 """
