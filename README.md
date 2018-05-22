@@ -18,14 +18,12 @@ Regina, Summarize and tell about Gustav Jung within 2 minutes.
 ## Requirements
 
 [SpeechRecognition](https://pypi.org/project/SpeechRecognition)
-[Wikipedia](https://github.com/goldsmith/Wikipedia)
-[PyTTSx3](https://pypi.org/project/pyttsx3)
-[PyAudio](https://pypi.org/project/PyAudio)
 
-- pip install SpeechRecognition
-- pip install wikipedia
-- pip install pyttsx3
-- pip install pyaudio
+[Wikipedia](https://github.com/goldsmith/Wikipedia)
+
+[PyTTSx3](https://pypi.org/project/pyttsx3)
+
+[PyAudio](https://pypi.org/project/PyAudio)
 
 ## *Will be* Built With
 
@@ -36,7 +34,9 @@ Regina, Summarize and tell about Gustav Jung within 2 minutes.
 
 * Record Search History - Json
 * Share: share with public / friendlist / direct mail / social media
-* Commands: record a note and save it.
+* _"Take Note" Command_: record a note and save it.
+* Start with "Regina" command.
+* _MultiProcessing_ while searching.
 * DAPP program?
 
 ## Authors
