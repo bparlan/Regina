@@ -16,6 +16,10 @@ import wave
 import wikipedia
 import pyttsx3
 
+“””
+TODO: https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
+“””
+
 # pip install pypiwin32
 # pip install pyttsx3
 # pip install wikipedia
