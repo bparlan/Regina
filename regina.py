@@ -167,7 +167,9 @@ def listen():
     print("please speak a word into the microphone")
     record_to_file(wav_location)
 
-    # TODO: Multithreading - processing https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
+    # TODO: Multithreading - processing
+    # https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
+    # https://www.tutorialspoint.com/python/python_multithreading.htm
 
     busy == True
     query = speech_to_text()
