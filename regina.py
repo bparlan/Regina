@@ -9,6 +9,9 @@ import os
 from sys import byteorder
 from array import array
 from struct import pack
+from multiprocessing import Process # https://stackoverflow.com/questions/2846653/how-to-use-threading-in-python#28463266
+
+import time
 
 import pyaudio
 import wave
@@ -164,13 +167,20 @@ def listen():
     print("please speak a word into the microphone")
     record_to_file(wav_location)
 
-    # TODO: https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
+    # TODO: Multithreading - processing https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
 
     busy == True
     query = speech_to_text()
+
     text_to_speech("I am searching for " + query)
     text_to_speech(search_in_wiki(query))
+
     busy == False
+
+def timer():
+    start = time.time()
+    end = time.time()
+    print(end - start)
 
 if __name__ == '__main__':
     while busy == False:
