@@ -1,8 +1,13 @@
 # Regina
 
-Voice Assistant - Wiki Summarizer
+Regina is a personal assistant that I'm building to make my life easier. I believe most of it's functions would be useful to many. But, I have more ideas than I can code myself.
 
-Current version demo run (instagram video): https://instagram.com/p/BjAZ-s9DxH2/
+**Important Note** to *anyone* who <3 readme.md
+
+I need someone(friend[collaborative], dreamer, coder[python]) to:
+    help.me
+
+Old demo run (instagram video): https://instagram.com/p/BjAZ-s9DxH2/
 
 [![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
@@ -11,9 +16,6 @@ Current version demo run (instagram video): https://instagram.com/p/BjAZ-s9DxH2/
 ## Getting Started
 
 This is **not** a completed or running project. Just I'm spending time on it with no regular consistency.
-
-Example command:
-Regina, Summarize and tell about Gustav Jung within 2 minutes.
 
 ### Requirements
 
@@ -24,6 +26,40 @@ Regina, Summarize and tell about Gustav Jung within 2 minutes.
 [PyTTSx3](https://pypi.org/project/pyttsx3)
 
 [PyAudio](https://pypi.org/project/PyAudio)
+
+## Functions
+
+### Available
+
+- search_on_wiki
+
+### 2do
+
+fix:
+
+* def listen()
+* def speak()
+
+add:
+
+- define ai_name (set **ai_name** from options[]) (Regina for me).
+- Summarize and tell about Gustav Jung within 2 minutes.
+
+* interaction_history (log) - Json
+* share(file): share with public / friendlist / direct mail / social media
+* _"Take Note" Command_: save(next or last, x, sentence | minute ) as .md.
+* Timer and Alarm
+* 2Do reminder - calendar
+* _MultiProcessing_ while searching
+* DAPP program? *Help needed!*
+
+* FB_search
+
+### A/V - Visualizer
+
+Spectrum and Visual with Python. Maybe with blender? *Help needed!*
+
+Example style that I built: [Advanced Artificial Cosciousness v_log.1.02: Factory Model Education](https://www.youtube.com/watch?v=HQyjXEnHwow)
 
 ### *NLP* Libraries to check
 
@@ -37,36 +73,6 @@ Regina, Summarize and tell about Gustav Jung within 2 minutes.
 - [Wit.ai](https://github.com/wit-ai/pywit)
 
 More info from [elitedatascience.com](https://elitedatascience.com/python-nlp-libraries)
-
-## TODO:
-
-### General
-
-* Interaction History - Json
-* Share: share with public / friendlist / direct mail / social media
-* _"Take Note" Command_: record a note and save it.
-* Start with a name command (Regina for me, set **name** from options).
-* Timer and Alarm
-* 2Do reminder - calendar
-* _MultiProcessing_ while searching.
-* DAPP program? Help needed!
-
-### A/V - Visualizer
-
-Spectrum and Visual with Python. Maybe with blender? Help needed!
-
-Example style that I built:
-
-[Advanced Artificial Cosciousness v_log.1.02: Factory Model Education](https://www.youtube.com/watch?v=HQyjXEnHwow)
-
-### LoL Helper
-
-Function that utilize alarm & timer specifically for League of Legends.
-
-## FIX:
-
-* def listen()
-* def speak()
 
 ## Authors
 

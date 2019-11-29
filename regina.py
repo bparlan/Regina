@@ -3,6 +3,62 @@
 # Created: 22.04.2018
 # regina.py
 
+"""
+tags: reasoning logical behaviour evaluation algorithmic critical thinking opensource
+
+platforms:
+1. pc
+2. mobile
+3. web
+4. car
+
+resources:
+- http://thepeakperformancecenter.com/educational-learning/thinking/critical-thinking/
+- http://thepeakperformancecenter.com/educational-learning/thinking/blooms-taxonomy/
+
+question reference:
+https://i.pinimg.com/originals/3f/b0/21/3fb021de640b63861e27db09abc84f1e.jpg
+
+TODO: Course https://www.udemy.com/cart/subscribe/course/808422/
+
+packaging - https://python-packaging.readthedocs.io/en/latest/minimal.html
+nltk - sentiment analysis
+chatbot:
+    rasa.stack - https://rasa.com/products/rasa-stack
+    bot.press - https://botpress.io/
+    bot framework - http://botframework.com/
+    project ana - https://github.com/Kitsune-tools/ProjectAna
+    wit.ai - https://wit.ai/
+    api.ai - https://dialogflow.com/
+docker
+source search - wikipedia
+pywsd - https://github.com/alvations/pywsd
+networkx - mindmap logical graph
+tts & stt
+brain:
+    wikipedia
+    tvtropes - pop culture wiki
+data:
+    sql database?
+    postgre sql
+    aws
+    data_tvtropes 3.2gb
+        https://github.com/ricardojmendez/tropology
+        https://mega.co.nz/#!EhZxhBhK!lT38KiMhGxTbjGKD6tJuimc48Tay4ILkEt70evgeM7c
+joke
+gensim?
+web:
+    django - https://www.djangoproject.com/
+    flask - http://flask.pocoo.org/extensions/
+    gunicorn - https://gunicorn.org/
+Phase 1.
+    Perspective to "Love, Death & Robots" with Regina.
+    imdb api
+    tvtropes api
+"""
+
+
+
 import settings # settings.py holds apikey variable.
 import speech_recognition as sr # https://realpython.com/python-speech-recognition/
 import os
@@ -17,6 +73,7 @@ import pyaudio
 import wave
 
 import wikipedia
+# pip install wikipedia
 import pyttsx3
 
 THRESHOLD = 500
@@ -142,8 +199,9 @@ def speech_to_text():
 
     type(audio)
 
-    wav_text = r.recognize_google(audio)
-    os.remove(wav_location)
+    # wav_text = r.recognize_google(audio)
+    wav_text = r.recognize_google(audio, language="tr-TR")
+    os.remove(wav_location) # delete wav file
     print("Wav's text: " + wav_text)
     return wav_text
 
@@ -164,15 +222,15 @@ def text_to_speech(to_be_read):
     engine.stop()
 
 def listen():
-    print("please speak a word into the microphone")
+    print("I'm listening...")
+    
     record_to_file(wav_location)
-
-    # TODO: Multithreading - processing
-    # https://stackoverflow.com/questions/18864859/python-executing-multiple-functions-simultaneously
-    # https://www.tutorialspoint.com/python/python_multithreading.htm
-
     busy == True
     query = speech_to_text()
+
+    if(query == "Regina"):
+        text_to_speech("Yes Master!")
+        print("Yes Master!")
 
     text_to_speech("I am searching for " + query)
     text_to_speech(search_in_wiki(query))
@@ -186,11 +244,20 @@ def timer():
 
 if __name__ == '__main__':
     while busy == False:
-        listen()
+        listen() # BAŞLATIYOR
+        # TODO: search_image(sentence - keyword):
+        #       search > download & save > while playing audio - play slideshow
+        
+        # TODO: while playing audio - write text to screen
+        
+        # TODO: define main functions search(other functions)
+        # TODO: function 
+        
         # TODO: Listen for "Regina", response "Yes master", and wait for commands.
         # TODO: List available commands / functions.
 
-
+        # TODO: jsonstore offers a free and secured JSON-based cloud datastore for small projects https://www.jsonstore.io/
+        # TODO: Factcheck of news
 """
 
 * Speech Recognition
