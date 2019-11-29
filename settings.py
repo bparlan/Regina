@@ -1,5 +1,5 @@
 # Author: Baris Parlan - @bparlan
-# Purpose: Wiki Summarizer Voice Assistant
+# Purpose: Regina Settings file
 # Created: 22.04.2018
 # settings.py
 

@@ -1,31 +1,16 @@
 # Regina
 
-Regina is a personal assistant that I'm building to make my life easier. I believe most of it's functions would be useful to many. But, I have more ideas than I can code myself.
+Regina is a personal assistant that I'm building to make my life easier. It suppose to run on my Android|iOs phone. I believe most of it's functions would be useful to many. But, I have more ideas than I can code myself.
 
 **Important Note** to *anyone* who <3 readme.md
 
-I need someone(friend[collaborative], dreamer, coder[python]) to:
-    help.me
-
+This is an under development & full of bugs project. I'm spending time on it with no regular consistency. I need someone(friend[collaborative], dreamer, coder[python]) to help me.
 Old demo run (instagram video): https://instagram.com/p/BjAZ-s9DxH2/
+*Requirements:* [SpeechRecognition](https://pypi.org/project/SpeechRecognition), [Wikipedia](https://github.com/goldsmith/Wikipedia), [PyTTSx3](https://pypi.org/project/pyttsx3), [PyAudio](https://pypi.org/project/PyAudio)
 
 [![forthebadge](https://forthebadge.com/images/badges/winter-is-coming.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-science.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
-
-## Getting Started
-
-This is **not** a completed or running project. Just I'm spending time on it with no regular consistency.
-
-### Requirements
-
-[SpeechRecognition](https://pypi.org/project/SpeechRecognition)
-
-[Wikipedia](https://github.com/goldsmith/Wikipedia)
-
-[PyTTSx3](https://pypi.org/project/pyttsx3)
-
-[PyAudio](https://pypi.org/project/PyAudio)
 
 ## Functions
 
@@ -33,27 +18,23 @@ This is **not** a completed or running project. Just I'm spending time on it wit
 
 - search_on_wiki
 
-### 2do
+### 2do Functions
 
-fix:
-
-* def listen()
-* def speak()
-
-add:
+*fix: def listen(), def speak()*
 
 - define ai_name (set **ai_name** from options[]) (Regina for me).
-- Summarize and tell about Gustav Jung within 2 minutes.
+- Search: Summarize and tell about Gustav Jung within 2 minutes.
+
+Music in Car: Freestyle rap recorder, Karaoke
+
+General:
 
 * interaction_history (log) - Json
-* share(file): share with public / friendlist / direct mail / social media
-* _"Take Note" Command_: save(next or last, x, sentence | minute ) as .md.
-* Timer and Alarm
-* 2Do reminder - calendar
+* _"Take Note" Command_: save(next or last, x, sentence | minute ) as .md
+* Timer and Alarm: from Phone
+* 2Do reminder - calendar: Google Keep & Calendar integration
 * _MultiProcessing_ while searching
 * DAPP program? *Help needed!*
-
-* FB_search
 
 ### A/V - Visualizer
 
